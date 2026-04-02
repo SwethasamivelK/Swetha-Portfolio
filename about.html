@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About | Swetha Samivel</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#0B0F1A;
+  --card:rgba(255,255,255,0.05);
+  --border:rgba(255,255,255,0.08);
+  --text:#F8FAFC;
+  --muted:#94A3B8;
+  --gradient:linear-gradient(90deg,#7C3AED,#EC4899,#06B6D4);
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
+body{background:var(--bg);color:var(--text);}
+
+/* NAV */
+nav{
+  display:flex;
+  justify-content:space-between;
+  padding:20px 8%;
+  position:sticky;
+  top:0;
+  background:rgba(11,15,26,0.7);
+  backdrop-filter:blur(10px);
+}
+nav strong{
+  background:var(--gradient);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+nav a{
+  margin-left:25px;
+  color:var(--muted);
+  text-decoration:none;
+}
+nav a:hover{color:#EC4899;}
+
+/* HERO */
+.hero{
+  text-align:center;
+  padding:100px 20px 50px;
+}
+.hero h1{
+  font-size:42px;
+  margin-bottom:10px;
+}
+.hero p{
+  color:var(--muted);
+}
+
+/* CONTAINER */
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:20px;
+}
+
+/* CARD */
+.card{
+  background:var(--card);
+  border:1px solid var(--border);
+  backdrop-filter:blur(10px);
+  padding:25px;
+  border-radius:12px;
+  margin-bottom:20px;
+  transition:.3s;
+}
+.card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 0 25px rgba(124,58,237,0.3);
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+/* About Me Paragraph Styling */
+.about-intro p {
+  font-size: 18px;
+  color: var(--text);
+  line-height: 1.8;
+  margin-bottom: 18px;
+  padding: 20px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.05);
+  border-left: 6px solid transparent;
+  background-clip: padding-box;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+/* Vertical gradient line */
+.about-intro p::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  border-radius: 12px 0 0 12px;
+  background: var(--gradient);
+}
+
+/* Gradient highlight for keywords */
+.about-intro p strong {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Glow effect on hover */
+.about-intro p:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 25px rgba(124, 58, 237, 0.4);
+  background: rgba(255,255,255,0.08);
+}
+
+/* TEXT */
+h2{
+  margin-bottom:15px;
+  color:#EC4899;
+}
+ul{padding-left:20px;}
+li{margin-bottom:10px;color:var(--muted);}
+
+
+/* FOOTER STYLING */
+.footer {
+  background: rgba(11, 15, 26, 0.9);
+  padding: 30px 20px;
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.footer strong {
+  color: var(--text);
+}
+
+.footer-links {
+  margin: 15px 0;
+}
+
+.footer-links a {
+  margin: 0 10px;
+  color: var(--muted);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: #EC4899;
+}
+
+.footer-social a {
+  margin: 0 8px;
+  color: var(--muted);
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.footer-social a:hover {
+  color: #06B6D4;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+.hero h1{font-size:30px;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+<strong><a href="index.html">Swetha</a></strong>
+<div>
+<a href="about.html">About</a>
+<a href="projects.html">Projects</a>
+<a href="skilss.html">Skills</a>
+<a href="contact.html">Contact</a>
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+<h1>About Me</h1>
+<p>Get to know more about my skills and journey</p>
+</section>
+
+<div class="container">
+
+<!-- INTRO -->
+<div class="card about-intro">
+  <p>I’m a passionate <strong>Frontend Developer</strong> focused on building modern, responsive, and user-friendly web applications.</p>
+  <p>I have experience working with HTML, CSS, and JavaScript, and I am currently learning <strong>React</strong> to build dynamic and scalable applications.</p>
+  <p>My goal is to become a skilled developer who creates high-performance and visually appealing websites.</p>
+</div>
+
+<!-- GRID SECTIONS -->
+<div class="grid">
+
+<div class="card">
+<h2>What I Do</h2>
+<ul>
+<li>Build responsive websites</li>
+<li>Create clean UI designs</li>
+<li>Write efficient code</li>
+<li>Optimize performance</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Currently Learning</h2>
+<ul>
+<li>React.js</li>
+<li>Advanced JavaScript</li>
+<li>API integration</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Strengths</h2>
+<ul>
+<li>Problem solving</li>
+<li>Attention to detail</li>
+<li>Quick learner</li>
+</ul>
+</div>
+
+</div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-container">
+    <p>© 2026 <strong>Swetha Samivel</strong>. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="skilss.html">Skills</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-social">
+      <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/yourlinkedin" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:s.swethasamivel@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

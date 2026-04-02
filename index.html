@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Swetha Samivel | Frontend Developer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<style>
+:root{
+  --bg: #0B0F1A;
+  --card: rgba(255,255,255,0.05);
+  --border: rgba(255,255,255,0.08);
+  --text: #F8FAFC;
+  --muted: #94A3B8;
+  --gradient: linear-gradient(90deg,#7C3AED,#EC4899,#06B6D4);
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
+body{background:var(--bg);color:var(--text);}
+
+/* NAV */
+nav{
+  display:flex;justify-content:space-between;
+  padding:20px 8%;
+  position:sticky;top:0;
+  background:rgba(11,15,26,0.7);
+  backdrop-filter:blur(10px);
+}
+nav strong{
+  background:var(--gradient);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+nav a{margin-left:25px;color:var(--muted);transition:.3s;text-decoration:none;}
+nav a:hover{color:#EC4899;}
+
+/* HERO */
+.hero{
+  text-align:center;
+  padding:120px 20px 80px;
+}
+.hero h1{
+  font-size:48px;
+  margin-bottom:15px;
+}
+.hero span{
+  background:var(--gradient);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.hero p{
+  color:var(--muted);
+  font-size:18px;
+  margin-bottom:25px;
+}
+.btn{
+  padding:12px 26px;
+  background:var(--gradient);
+  border-radius:8px;
+  color:#fff;
+  display:inline-block;
+  margin:5px;
+  transition:.3s;
+}
+.btn:hover{transform:translateY(-3px);}
+
+/* SECTIONS */
+.section{
+  max-width:1100px;
+  margin:40px auto;
+  padding:40px;
+}
+h2{
+  text-align:center;
+  margin-bottom:30px;
+}
+
+/* PROJECTS SECTION */
+#projects {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 40px 20px;
+}
+
+/* Projects Grid: 3 in a row */
+#projects .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 30px; /* space between cards */
+  justify-items: stretch; /* make cards same width */
+  align-items: stretch;   /* make cards same height */
+}
+
+/* Individual Project Card */
+#projects .card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  padding: 25px 20px;
+  border-radius: 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Project Title */
+#projects .card h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+  background: linear-gradient(90deg, #7C3AED, #EC4899, #06B6D4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Project Description */
+#projects .card p {
+  font-size: 16px;
+  color: #94A3B8;
+  margin-bottom: 15px;
+}
+
+/* Project Links */
+#projects .project-links a {
+  font-size: 14px;
+  margin-right: 12px;
+  color: #06B6D4;
+  text-decoration: none;
+  transition: 0.3s;
+}
+#projects .project-links a:hover {
+  color: #EC4899;
+  text-decoration: underline;
+}
+
+/* Hover Effect on Card */
+#projects .card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 0 25px rgba(124, 58, 237, 0.3);
+}
+
+/* RESPONSIVE: 2 per row for tablets, 1 per row for mobile */
+@media (max-width: 1024px) {
+  #projects .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  #projects .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  #projects .grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row */
+  }
+}
+
+@media (max-width: 768px) {
+  #projects .grid {
+    grid-template-columns: 1fr; /* 1 per row */
+  }
+}
+
+/* Responsive Grid */
+@media (max-width: 1024px) {
+  #projects .grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row */
+  }
+}
+
+@media (max-width: 768px) {
+  #projects .grid {
+    grid-template-columns: 1fr; /* 1 per row */
+  }
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 1024px) {
+  #projects .grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row */
+  }
+}
+
+@media (max-width: 768px) {
+  #projects .grid {
+    grid-template-columns: 1fr; /* 1 per row */
+  }
+}
+
+/* Project Image */
+#projects .project-image {
+  width: 100%;
+  height: 180px; /* fixed height */
+  object-fit: cover; /* makes sure the image covers the area without stretching */
+  border-radius: 12px 12px 0 0; /* rounded top corners */
+  margin-bottom: 15px;
+}
+
+/* Responsive Grid */
+@media (max-width: 768px) {
+  #projects .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ABOUT SECTION STYLING */
+#about .card{
+  position:relative;
+  overflow:hidden;
+  transition:all 0.4s ease;
+  text-align:left;
+}
+#about .card p{
+  font-size:18px;
+  line-height:1.8;
+  margin-bottom:15px;
+  padding-left:20px;
+  position:relative;
+}
+#about .card p::before{
+  content:'';
+  position:absolute;
+  left:0;
+  top:0;
+  width:6px;
+  height:100%;
+  border-radius:3px;
+  background:var(--gradient);
+}
+#about .card p strong{
+  background:var(--gradient);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+#about .card:hover p{
+  background: rgba(255,255,255,0.05);
+  box-shadow: 0 0 20px rgba(124,58,237,0.3);
+}
+
+/* Skills Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* Individual Skill Card */
+.skill-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  padding: 20px 25px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 0 25px rgba(124,58,237,0.3);
+}
+
+/* Skill Card Header */
+.skill-card h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  background: linear-gradient(90deg, #7C3AED, #EC4899, #06B6D4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Skill Card Text */
+.skill-card p {
+  color: #94A3B8;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* CONTACT STYLING */
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-size: 18px;
+}
+.contact p {
+  display: flex;
+  align-items: center;
+  background: rgba(255,255,255,0.05);
+  padding: 12px 20px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+.contact p::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 5px;
+  height: 100%;
+  border-radius: 3px;
+  background: linear-gradient(90deg,#7C3AED,#EC4899,#06B6D4);
+}
+.contact p:hover {
+  background: rgba(124,58,237,0.1);
+  box-shadow: 0 0 15px rgba(124,58,237,0.3);
+}
+.contact a:hover {
+  text-decoration: underline;
+}
+
+/* FOOTER STYLING */
+.footer {
+  background: rgba(11, 15, 26, 0.9);
+  padding: 30px 20px;
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.footer strong {
+  color: var(--text);
+}
+
+.footer-links {
+  margin: 15px 0;
+}
+
+.footer-links a {
+  margin: 0 10px;
+  color: var(--muted);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: #EC4899;
+}
+
+.footer-social a {
+  margin: 0 8px;
+  color: var(--muted);
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.footer-social a:hover {
+  color: #06B6D4;
+}
+
+/* ANIMATION */
+.fade{opacity:0;transform:translateY(20px);transition:.8s;}
+.show{opacity:1;transform:translateY(0);}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+.hero h1{font-size:32px;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+<strong><a href="index.html" style="text-decoration:none;color:inherit;">Swetha</a></strong>
+<div>
+<a href="about.html">About</a>
+<a href="projects.html">Projects</a>
+<a href="skilss.html">Skills</a>
+<a href="contact.html">Contact</a>
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero fade">
+  <h1>Hi, I'm <span>Swetha</span> 👋</h1>
+  <p>Frontend Developer crafting modern, responsive and user-friendly web applications.</p>
+  
+  <!-- Hero Buttons -->
+  <a href="projects.html" class="btn">View Projects</a>
+  <a href="contact.html" class="btn">Contact Me</a>
+  <a href="resume.pdf" download class="btn">Download Resume</a>
+</section>
+
+<!-- ABOUT (SHORT VERSION FOR HOME) -->
+<section id="about" class="section fade">
+<h2>About Me</h2>
+
+<div class="card">
+<p>
+I’m a <strong>Frontend Developer</strong> passionate about building responsive and user-friendly web applications using HTML, CSS, and JavaScript.
+</p>
+
+<p>
+I enjoy creating clean UI designs and continuously improving my skills in modern technologies like <strong>React</strong>.
+</p>
+
+<a href="about.html" class="btn">Read More</a>
+</div>
+
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section fade">
+<h2>Projects</h2>
+
+<div class="grid">
+
+<div class="card">
+  <img src="project1.png" alt="Portfolio Website" class="project-image">
+  <h3>Portfolio Website</h3>
+  <p>Responsive personal portfolio with modern UI.</p>
+  <div class="project-links">
+    <a href="#">Live Demo</a>
+    <a href="#">GitHub</a>
+  </div>
+</div>
+
+<div class="card">
+  <img src="project2.png" alt="Todo App" class="project-image">
+  <h3>Todo App</h3>
+  <p>Task manager with local storage.</p>
+  <div class="project-links">
+    <a href="#">Live Demo</a>
+    <a href="#">GitHub</a>
+  </div>
+</div>
+
+<div class="card">
+  <img src="project1.png" alt="Weather App" class="project-image">
+  <h3>Weather App</h3>
+  <p>Real-time weather using API.</p>
+  <div class="project-links">
+    <a href="#">Live Demo</a>
+    <a href="#">GitHub</a>
+  </div>
+</div>
+</div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section fade">
+  <h2>Skills</h2>
+  <div class="grid skills-grid">
+
+    <div class="card skill-card">
+      <h3>Frontend</h3>
+      <p>HTML, CSS, JavaScript</p>
+    </div>
+
+    <div class="card skill-card">
+      <h3>Frameworks</h3>
+      <p>React (learning)</p>
+    </div>
+
+    <div class="card skill-card">
+      <h3>Styling</h3>
+      <p>Tailwind CSS, Flexbox, Grid</p>
+    </div>
+
+    <div class="card skill-card">
+      <h3>Tools</h3>
+      <p>Git, GitHub, VS Code</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section fade">
+  <h2>Contact</h2>
+  <div class="card contact">
+    <p><i class="fas fa-envelope" style="color:#06B6D4;margin-right:8px;"></i>
+       <strong>Email:</strong> <a href="mailto:s.swethasamivel@gmail.com" style="color:#06B6D4;text-decoration:none;">s.swethasamivel@gmail.com</a>
+    </p>
+    <p><i class="fas fa-phone" style="color:#06B6D4;margin-right:8px;"></i>
+       <strong>Phone:</strong> <a href="tel:+918248595771" style="color:#06B6D4;text-decoration:none;">8248595771</a>
+    </p>
+    <p><i class="fab fa-github" style="color:#06B6D4;margin-right:8px;"></i>
+       <strong>GitHub:</strong> <a href="https://github.com/yourusername" target="_blank" style="color:#06B6D4;text-decoration:none;">github.com/yourusername</a>
+    </p>
+    <p><i class="fab fa-linkedin" style="color:#06B6D4;margin-right:8px;"></i>
+       <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/yourlinkedin" target="_blank" style="color:#06B6D4;text-decoration:none;">linkedin.com/in/yourlinkedin</a>
+    </p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-container">
+    <p>© 2026 <strong>Swetha Samivel</strong>. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="skilss.html">Skills</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-social">
+      <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/yourlinkedin" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:s.swethasamivel@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+  </div>
+</footer>
+
+<!-- SCRIPT -->
+<script>
+const faders=document.querySelectorAll('.fade');
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+});
+faders.forEach(el=>observer.observe(el));
+</script>
+
+</body>
+</html>
